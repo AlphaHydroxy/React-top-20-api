@@ -16,13 +16,12 @@ export default class SongDetails extends React.Component {
     console.log(this.props.songs);
       const songDetails = this.props.songs.map((song, index) => {
         return (
-          <div key={index}>
-            <h3>{index + 1}</h3>
+          <div className="song-container" key={index}>
+            <h1 className="chart-no">{index + 1}</h1>
             <img src={song["im:image"][2].label} alt={song["im:artist"].label} />
             <h3>{song.title.label}</h3>
-            <h3>{song.link.attribute}</h3>
             <audio controls>
-              <source src={song.link[1].attributes} type="audio/m4a" />
+              <source src={song.link[1].attributes.href} type="audio/m4a" />
             </audio>
           </div>
         );
