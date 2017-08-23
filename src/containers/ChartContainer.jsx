@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header.jsx';
 import SongDetails from '../components/SongDetails.jsx';
+import './ChartContainer.css';
 
 export default class ChartContainer extends React.Component {
   constructor(props) {

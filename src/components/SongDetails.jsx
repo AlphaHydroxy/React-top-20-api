@@ -1,4 +1,5 @@
 import React from 'react';
+import './SongDetails.css'
 
 export default class SongDetails extends React.Component {
 
@@ -21,8 +22,9 @@ export default class SongDetails extends React.Component {
             <img src={song["im:image"][2].label} alt={song["im:artist"].label} />
             <h3>{song.title.label}</h3>
             <audio controls>
-              <source src={song.link[1].attributes.href} type="audio/m4a" />
+              <source src={song.link[1].attributes.href} type="audio/mp4" />
             </audio>
+
           </div>
         );
       });
